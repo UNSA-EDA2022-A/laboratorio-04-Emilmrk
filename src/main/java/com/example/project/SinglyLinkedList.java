@@ -137,18 +137,36 @@ public class SinglyLinkedList<T> {
 
     // Inserta un nuevo nodo en una posicion especifica de la lista
     public void insertNth(T data, int position) {
+    	Node<T> nuevo = new Node<T>(data, null), indice = first, temporal = null;
+
+    	if (size>position) {
+    		while(indice!=null) {
+
+    			if(position==0) {
+
+    				nuevo.setNext(indice.getNext());
+    				indice.setNext(nuevo);
+    			}
+
+    			position--;
+    			indice=indice.getNext();
+
+    		}
+    	}else {
+    		System.out.println("Fuera de rango");
+    	}
 
     }
 
     // Elimina el nodo de una posicion especifica de la lista
     public void deleteNth(int position) {
-
+        
     }
 
     public static void main(final String[] args) {
 
-         testExercicio1();
-        // testExercicio2();
+        // testExercicio1();
+         testExercicio2();
         // testExercicio3();       
 
     }
