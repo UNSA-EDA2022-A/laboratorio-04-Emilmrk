@@ -160,14 +160,38 @@ public class SinglyLinkedList<T> {
 
     // Elimina el nodo de una posicion especifica de la lista
     public void deleteNth(int position) {
-        
+  	Node<T> indice = first, anterior = first;
+
+  		if (position == 0) {
+  			
+			removeFirst();
+			
+		}else if (size>position) {
+    		
+    		while(indice!=null) {
+    			
+    			if(position==0) {
+
+    				
+    				anterior.setNext(indice.getNext());
+    				
+    			}
+
+    			position--;
+    			anterior = indice;
+    			indice = indice.getNext();
+    			
+    		}
+    	}else {
+    		System.out.println("Fuera de rango");
+    	}
     }
 
     public static void main(final String[] args) {
 
         // testExercicio1();
-         testExercicio2();
-        // testExercicio3();       
+        // testExercicio2();
+         testExercicio3();       
 
     }
 
