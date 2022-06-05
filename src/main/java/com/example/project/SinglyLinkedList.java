@@ -142,7 +142,7 @@ public class SinglyLinkedList<T> {
     	if (size>position) {
     		while(indice!=null) {
 
-    			if(position==0) {
+    			if(position==1) {
 
     				nuevo.setNext(indice.getNext());
     				indice.setNext(nuevo);
@@ -190,8 +190,8 @@ public class SinglyLinkedList<T> {
     public static void main(final String[] args) {
 
         // testExercicio1();
-        // testExercicio2();
-         testExercicio3();       
+         testExercicio2();
+        // testExercicio3();       
 
     }
 
